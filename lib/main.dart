@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:testgithub/features/splash/presentation/manger/sign_up_cubit.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(BlocProvider(
+      create: (context) => SignUpCubit(),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
